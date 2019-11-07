@@ -1,0 +1,16 @@
+<div class="d-flex justify-content-center align-items-center flex-column">
+  <div class="card mb-3">
+    <video autoplay playsinline muted id="webcam" width="300" height="300" #video></video>
+  </div>
+
+
+  <div *ngIf="loading">
+    <img src="./assets/loading.gif" height="250px" width="250px">
+  </div>
+
+  <div class="list-group">
+    <div class="list-group-item" *ngFor="let prediction of predictions">
+      {{prediction.className}} - {{prediction.probability | percent}}
+    </div>
+  </div>
+</div>

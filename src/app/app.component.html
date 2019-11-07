@@ -1,9 +1,19 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
+<div class="d-flex justify-content-center align-items-center flex-column mt-2">
+  <h3>{{ title }}</h3>
+  <p>
+    An Angular implementation of tensorflowJS
+    <a href="https://github.com/tensorflow/tfjs-models/tree/master/mobilenet" style="text-decoration: underline;">Mobilenet</a> model.
+  </p>
 </div>
-<app-image-upload></app-image-upload>
+<ul class="nav justify-content-center pt-2 pb-2 mb-3" style="background-color: #fdfdfd;">
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/">Image Classifier - Upload</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" routerLink="/webcam">Image Classifier - Uses Webcam</a>
+  </li>
+</ul>
+
+<router-outlet></router-outlet>
 
 
